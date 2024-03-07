@@ -1,0 +1,104 @@
+// :root {
+//   --primaryColor: orange;
+// }
+
+@use "../assets/" as *;
+
+$baseMargin: 4px;
+$smallMargin: $baseMargin/2;
+$bigMargin: $baseMargin * 2; //Header
+header {
+  background-color: grey;
+
+  ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+
+    li {
+      margin: 10px 20px;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+// Main
+h1 {
+  color: $primaryColor;
+  border: $border;
+}
+
+// %item {
+//   height: 200px;
+//   width: 200px;
+//   font-size: 32px;
+//   font-weight: bold;
+//   border: $border;
+// }
+
+@mixin item($bgColor: pink) {
+  height: 200px;
+  width: 200px;
+  font-size: 32px;
+  font-weight: bold;
+  border: $border;
+  background-color: $bgColor;
+}
+
+%d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  &1 {
+    //@extend %item;
+    @include item($bgColor: lightblue);
+    color: black;
+    margin: 8px;
+  }
+
+  &2 {
+    //@extend %item;
+    @include item();
+
+    color: map-get($colors, secondary);
+
+    background-color: lighten($primaryColor, 20%);
+    margin: 8px * 2;
+  }
+
+  &3 {
+    @include item();
+
+    //@extend %item;
+    @extend %d-flex-center;
+
+    color: $primaryColor;
+    margin: 8px * 4;
+  }
+
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
+// .button {
+//   width: 100px;
+//   height: 100px;
+//   &-success {
+//     background-color: green;
+//   }
+//   &-warning {
+//     background-color: orange;
+//   }
+//   &-danger {
+//     background-color: red;
+//   }
+// }

@@ -1,0 +1,4 @@
+@use "colors";
+
+$borderWidth: 1px;
+$border: $borderWidth solid colors.$primaryColor; //LIST

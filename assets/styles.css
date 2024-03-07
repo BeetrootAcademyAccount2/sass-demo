@@ -1,0 +1,62 @@
+header {
+  background-color: grey;
+}
+header ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  list-style: none;
+}
+header ul li {
+  margin: 10px 20px;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  color: green;
+  border: 1px solid green;
+}
+
+.item3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  height: 200px;
+  width: 200px;
+  font-size: 32px;
+  font-weight: bold;
+  border: 1px solid green;
+  background-color: lightblue;
+  color: black;
+  margin: 8px;
+}
+.item2 {
+  height: 200px;
+  width: 200px;
+  font-size: 32px;
+  font-weight: bold;
+  border: 1px solid green;
+  background-color: pink;
+  color: red;
+  background-color: #00e600;
+  margin: 16px;
+}
+.item3 {
+  height: 200px;
+  width: 200px;
+  font-size: 32px;
+  font-weight: bold;
+  border: 1px solid green;
+  background-color: pink;
+  color: green;
+  margin: 32px;
+}
+.item:hover {
+  background-color: lightblue;
+}/*# sourceMappingURL=styles.css.map */
